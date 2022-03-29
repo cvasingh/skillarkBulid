@@ -109,13 +109,14 @@ router.post('/callback/:coursename/:name', (req, res) => {
           if (result.STATUS === 'TXN_SUCCESS') {
             dbData['STATUS'] = 1;
             database.insert(dbData, tableName, (cbData) => {
-              res.send(statusCode['success']);
+              
+              res.redirect("https://skillark.org/");
             })
 
           }
           else {
             database.insert(dbData, tableName, (cbData) => {
-              res.redirect("http://localhost:3000/");
+              res.redirect("https://skillark.org/");
               // res.redirect()
               // res.send(false);
             })
@@ -127,7 +128,8 @@ router.post('/callback/:coursename/:name', (req, res) => {
     });
   }
   else {
-    res.send(statusCode['failed']);
+    
+              res.redirect("https://skillark.org/");
   }
 })
 

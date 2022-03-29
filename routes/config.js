@@ -8,7 +8,7 @@ const config = {
   mid: "rXBPFj10520108198180",
   key: "L3jNgRtLEBbtrmmW",
   website: "skillark",
-  CALLBACK_URL: `http://localhost:3000/payment/callback`,
+  CALLBACK_URL: `https://skillark.org/payment/callback`,
 
   //EmailConfig
 
